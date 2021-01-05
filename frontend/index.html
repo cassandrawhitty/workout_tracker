@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Play&display=swap" rel="stylesheet">
+    <title>Workout Tracker</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1 class="title">Welcome to Workout Tracker!</h1>
+    <section class="workout-form">
+        <form method="POST" action="http://localhost:3000/workouts" class="create-workout">
+            <label class="form-text" for="date">Date:</label>
+            <input type="text" name="date" />
+            <label class="form-text" for="duration">Duration:</label>
+            <select name="duration" class="duration-menu">
+                <option class="dropdown-text">0-15 mins</option>
+                <option class="dropdown-text">15-30 mins</option>
+                <option class="dropdown-text">30-45 mins</option>
+                <option class="dropdown-text">45-60 mins</option>
+                <option class="dropdown-text">60-75 mins</option>
+                <option class="dropdown-text">75-90 mins</option>
+                <option class="dropdown-text">over 90 mins</option>
+            </select><br>
+            <label class="form-text" for="description">Brief Description of Exercise:</label>
+            <input type="text" name="description" /><br>
+            <input class="button" type="submit" value="Add Workout">
+        </form>
+    </section>
+    <section id="workouts-container">
+        
+    </section>
+</body>
+</html>
