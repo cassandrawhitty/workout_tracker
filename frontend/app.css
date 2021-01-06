@@ -25,6 +25,27 @@ body {
     margin: 10px; 
     background-color: #4ac4ac; 
     font-size: 18px; 
+    cursor: pointer;
+}
+
+.auth-text {
+    text-decoration: none; 
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: black;
 }
 
 .workout-card {

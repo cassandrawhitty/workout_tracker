@@ -11,8 +11,10 @@
 </head>
 <body>
     <h1 class="title">Welcome to Workout Tracker!</h1>
-    <a href="signup.html">Sign Up</a>
-    <a href="login.html">Log In</a>
+    <button class="button"><a class="auth-text" href="signup.html">Sign Up</a></button>
+    <button class="button"><a class="auth-text" href="login.html">Log In</a></button>
+    <button class="logout-button button">Logout</button>
+    <p class="log-message"></p>
     <section class="workout-form">
         <form method="POST" action="http://localhost:3000/workouts" class="create-workout">
             <label class="form-text" for="date">Date:</label>
