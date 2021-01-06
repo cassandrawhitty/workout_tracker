@@ -2,6 +2,19 @@ baseURL = "http://localhost:3000/workouts"
 
 const workoutsContainer = document.querySelector('#workouts-container')
 const workoutForm = document.querySelector('.create-workout')
+const logMessage = document.querySelector('.log-message')
+const logoutButton = document.querySelector('.logout-button')
+
+logoutButton.addEventListener("click", () => {
+    localStorage.removeItem("token")
+    location.replace("index.html")
+})
+
+if(localStorage.getItem("token")){
+    logMessage.textContent = "You are logged in!"
+} else {
+    logMessage.textContent = "You are not logged in!"
+}
 
 fetch(baseURL)
     .then(response => response.json())
