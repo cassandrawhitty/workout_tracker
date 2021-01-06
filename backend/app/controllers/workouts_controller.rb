@@ -16,7 +16,7 @@ class WorkoutsController < ApplicationController
         @workout = Workout.create(
             date: params[:date],
             duration: params[:duration],
-            description: params[:description]
+            description: params[:description],
         )
 
         render json: @workout
