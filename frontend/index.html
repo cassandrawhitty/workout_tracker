@@ -11,10 +11,12 @@
 </head>
 <body>
     <h1 class="title">Welcome to Workout Tracker!</h1>
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Log In</a>
     <section class="workout-form">
         <form method="POST" action="http://localhost:3000/workouts" class="create-workout">
             <label class="form-text" for="date">Date:</label>
-            <input type="text" name="date" />
+            <input type="date" name="date" />
             <label class="form-text" for="duration">Duration:</label>
             <select name="duration" class="duration-menu">
                 <option class="dropdown-text">0-15 mins</option>

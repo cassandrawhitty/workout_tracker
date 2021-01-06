@@ -35,3 +35,9 @@ body {
     background-color: #b4ffff; 
     font-family: 'Play', sans-serif;
 }
+
+.like-button {
+    width: 20%; 
+    margin-left: 50px; 
+    margin-top: 15px; 
+}
