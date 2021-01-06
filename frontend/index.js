@@ -37,6 +37,14 @@ function createCard(workout) {
         }).then(response => response.json())
         workoutCard.remove()
     })
+
+    likeButton.addEventListener("click", () => {
+        likeButton.src = "/img/red-heart.png"
+    })
+
+    likeButton.addEventListener("dblclick", () => {
+        likeButton.src = "/img/blank-heart.png"
+    })
 }
     
 workoutForm.addEventListener('submit', (event) => {
