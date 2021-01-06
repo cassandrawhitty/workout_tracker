@@ -22,6 +22,14 @@ class WorkoutsController < ApplicationController
         render json: @workout
     end
 
+    def update
+        @workout = Workout.find(params[:id])
+
+        @workout.update(favorite: params[:favorite])
+
+        render json: @workout
+    end
+
     def destroy
         @workout = Workout.find(params[:id])
         @workout.destroy

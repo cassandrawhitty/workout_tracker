@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Workout.destroy_all
+# Workout.destroy_all
 
-Workout.create(date: "12/30/2020", duration: "1-15 mins", description: "Yoga")
-Workout.create(date: "12/31/2020", duration: "15-30 mins", description: "HIIT")
+# Workout.create(date: "12/30/2020", duration: "1-15 mins", description: "Yoga")
+# Workout.create(date: "12/31/2020", duration: "15-30 mins", description: "HIIT")
