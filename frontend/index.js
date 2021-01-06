@@ -37,9 +37,17 @@ function createCard(workout) {
     deleteButton.textContent = "Delete"
     deleteButton.classList.add("button")
     deleteButton.classList.add("delete-button")
-    likeButton.src = "/img/blank-heart.png"
-    likeButton.alt = "Empty heart button"
+    // likeButton.src = "/img/blank-heart.png"
+    // likeButton.alt = "Empty heart button"
     likeButton.classList.add("like-button")
+
+    if(workout.favorite == true){
+        likeButton.src = "/img/red-heart.png"
+        likeButton.alt = "Empty heart button"
+    } else {
+        likeButton.src = "/img/blank-heart.png"
+        likeButton.alt = "Full heart button"
+    }
 
     workoutsContainer.append(workoutCard)
     workoutCard.append(workoutDate, workoutDuration, workoutDescription, deleteButton, likeButton)
@@ -52,12 +60,48 @@ function createCard(workout) {
     })
 
     likeButton.addEventListener("click", () => {
-        likeButton.src = "/img/red-heart.png"
+        let workoutObject 
+        console.log(likeButton.src)
+        if(likeButton.src == "http://localhost:3001/img/red-heart.png") {
+            likeButton.src = "/img/blank-heart.png"
+
+            workoutObject = {
+                "favorite": false
+            }
+
+        } else {
+            likeButton.src = "/img/red-heart.png"
+
+            workoutObject = {
+                "favorite": true
+            }
+    
+        }
+
+        fetch(`${baseURL}/${workout.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(workoutObject)
+        }).then(response => response.json())
     })
 
-    likeButton.addEventListener("dblclick", () => {
-        likeButton.src = "/img/blank-heart.png"
-    })
+    // likeButton.addEventListener("dblclick", () => {
+    //     likeButton.src = "/img/blank-heart.png"
+
+    //     const workoutObject = {
+    //         "favorite": false
+    //     }
+
+    //     fetch(`${baseURL}/${workout.id}`, {
+    //         method: "PATCH",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(workoutObject)
+    //     }).then(response => response.json())
+    // })
 }
     
 workoutForm.addEventListener('submit', (event) => {
