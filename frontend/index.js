@@ -31,14 +31,12 @@ function createCard(workout) {
     const likeButton = document.createElement('img')
 
     workoutCard.classList.add("workout-card")
-    workoutDate.textContent = workout.date
+    workoutDate.textContent = dateUnscramble(workout.date)
     workoutDuration.textContent = workout.duration
     workoutDescription.textContent = workout.description
     deleteButton.textContent = "Delete"
     deleteButton.classList.add("button")
     deleteButton.classList.add("delete-button")
-    // likeButton.src = "/img/blank-heart.png"
-    // likeButton.alt = "Empty heart button"
     likeButton.classList.add("like-button")
 
     if(workout.favorite == true){
@@ -86,23 +84,13 @@ function createCard(workout) {
             body: JSON.stringify(workoutObject)
         }).then(response => response.json())
     })
-
-    // likeButton.addEventListener("dblclick", () => {
-    //     likeButton.src = "/img/blank-heart.png"
-
-    //     const workoutObject = {
-    //         "favorite": false
-    //     }
-
-    //     fetch(`${baseURL}/${workout.id}`, {
-    //         method: "PATCH",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(workoutObject)
-    //     }).then(response => response.json())
-    // })
 }
+
+function dateUnscramble(string){
+    let arrayOfNumbers = string.split("-")
+    let date = arrayOfNumbers[1] + "/" + arrayOfNumbers[2] + "/" + arrayOfNumbers[0]
+    return date
+   }
     
 workoutForm.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -130,24 +118,7 @@ workoutForm.addEventListener('submit', (event) => {
     workoutForm.reset() 
 })
 
-// Other Code:
 
-// editButton.addEventListener("click", () => {
-
-//     const workoutObject = {
-//         "date": workout.date,
-//         "duration": workout.duration,
-//         "description": workout.description
-//     }
-
-//     fetch(`${baseURL}/${workout.id}`, {
-//         method: "PATCH", 
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(workoutObject)
-//     })
-// })
 
 
 
