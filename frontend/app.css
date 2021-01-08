@@ -5,7 +5,7 @@ body {
 .title { 
     font-family: 'Barlow', sans-serif;
     color: 	#2b0067;
-    margin-left: 30px; 
+    margin-left: 10px; 
 }
 
 .create-workout { 
@@ -32,6 +32,10 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
+}
+
+.delete-button {
+    width: 25%; 
 }
 
 #auth-buttons {
@@ -83,13 +87,20 @@ a:active {
 
 /******************TABLET STYLES******************/
 @media only screen and (min-width: 768px) {
+    .title {
+        margin-left: 10px;
+    }
+    
     #auth-buttons {
         display: flex; 
-
     }
     
     .button {
         width: 25%; 
+    }
+
+    .delete-button {
+        width: 35%; 
     }
 
     .workout-card {
@@ -103,15 +114,26 @@ a:active {
     }
 }
 
-/******************TABLET STYLES******************/
+/******************DESKTOP STYLES******************/
 @media only screen and (min-width: 1200px) {
     .title {
+        font-size: 50px; 
         display: flex; 
-        justify-content: center;
+        justify-content: left;
+        margin-left: 10px; 
+    }
+
+    .button {
+        width: 20%; 
     }
 
     #auth-buttons {
         display: flex; 
-        justify-content: space-around; 
+        wrap: wrap; 
+    }
+
+    #workouts-container {
+        display: flex; 
+        justify-content: left; 
     }
 }
