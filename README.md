@@ -2,7 +2,7 @@
   This app is designed to help users record the dates, durations, and types of workouts in one convenient place for their reference.  Users log in, and submit information about workouts, and then they have lifelong access to that information.  They can also favorite workouts they enjoyed the most.
   
   ## Inspiration
-    It is January, and I was thinking about what type of app would really help me keep track of my workouts in a simple, user-friendly way.  This app puts all the information in one convenient place.  It combines simplicity, useability, and personal accountability in order to track workouts.
+  It is January, and I was thinking about what type of app would really help me keep track of my workouts in a simple, user-friendly way.  This app puts all the information in one convenient place.  It combines simplicity, useability, and personal accountability in order to track workouts.
     
   ## Technologies
   
