@@ -5,6 +5,7 @@ body {
 .title { 
     font-family: 'Barlow', sans-serif;
     color: 	#2b0067;
+    margin-left: 30px; 
 }
 
 .create-workout { 
@@ -12,6 +13,7 @@ body {
 }
 
 .form-text {
+    font-family: 'Barlow', sans-serif;
     font-size: 20px; 
     margin: 10px; 
 }
@@ -26,6 +28,14 @@ body {
     background-color: #4ac4ac; 
     font-size: 18px; 
     cursor: pointer;
+    width: 80%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#auth-buttons {
+    display: flex;
 }
 
 .auth-text {
@@ -48,9 +58,13 @@ a:active {
     color: black;
 }
 
+.description {
+    margin-left: 10px; 
+}
+
 .workout-card {
     border: 5px solid black; 
-    width: 10%; 
+    width: 80%; 
     margin: 20px; 
     padding: 10px; 
     background-color: #b4ffff; 
@@ -59,6 +73,45 @@ a:active {
 
 .like-button {
     width: 20%; 
-    margin-left: 50px; 
+    margin-left: 100px; 
     margin-top: 15px; 
+}
+
+.signup-text {
+    font-family: 'Barlow', sans-serif;
+}
+
+/******************TABLET STYLES******************/
+@media only screen and (min-width: 768px) {
+    #auth-buttons {
+        display: flex; 
+
+    }
+    
+    .button {
+        width: 25%; 
+    }
+
+    .workout-card {
+        width: 25%; 
+    }
+
+    #workouts-container {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+}
+
+/******************TABLET STYLES******************/
+@media only screen and (min-width: 1200px) {
+    .title {
+        display: flex; 
+        justify-content: center;
+    }
+
+    #auth-buttons {
+        display: flex; 
+        justify-content: space-around; 
+    }
 }

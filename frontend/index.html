@@ -11,16 +11,18 @@
 </head>
 <body>
     <h1 class="title">Welcome to Workout Tracker!</h1>
-    <button class="button"><a class="auth-text" href="signup.html">Sign Up</a></button>
-    <button class="button"><a class="auth-text" href="login.html">Log In</a></button>
-    <button class="logout-button button">Logout</button>
+    <section id="auth-buttons">
+        <button class="button"><a class="auth-text" href="signup.html">Sign Up</a></button>
+        <button class="button"><a class="auth-text" href="login.html">Log In</a></button>
+        <button class="logout-button button">Logout</button>
+    </section>
     <p class="log-message"></p>
     <section class="workout-form">
         <form method="POST" action="http://localhost:3000/workouts" class="create-workout">
             <label class="form-text" for="date">Date:</label>
-            <input type="date" name="date" />
+            <input type="date" name="date" /> <br>
             <label class="form-text" for="duration">Duration:</label>
-            <select name="duration" class="duration-menu">
+            <select name="duration" class="duration-menu"> <br>
                 <option class="dropdown-text">0-15 mins</option>
                 <option class="dropdown-text">15-30 mins</option>
                 <option class="dropdown-text">30-45 mins</option>
@@ -30,7 +32,7 @@
                 <option class="dropdown-text">over 90 mins</option>
             </select><br>
             <label class="form-text" for="description">Brief Description of Exercise:</label>
-            <input type="text" name="description" /><br>
+            <input class="description" type="text" name="description" /><br>
             <input class="button" type="submit" value="Add Workout">
         </form>
     </section>
